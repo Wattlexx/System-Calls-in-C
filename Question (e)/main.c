@@ -13,16 +13,6 @@ Question e)
 This program constantly watches all processes (every 8 Seconds) and gives a report to the user regarding which they'd want to kill
 Based on high memory usage and long CPU usage.
 main.c contains the heart of the program (the main function) and the function in which the thread will call to get input from the user
-
-Regards:
-* One small(non-detrimental) bug and one running condition
-    * Bug: This has to do with the thread: If you input a selection every time when prompted, then as soon as you hit enter the following code in the main will execute.
-    * However, if you miss an input and the program refreshes by itself than further inputs will not stop the thread and will need to wait the 8 seconds for
-    * the proceeding kill code (or whatever condition gets satisfied) to execute. The program still works and I couldn't figure out the problem so here it remains.
-    * Condition: If you have processes whose Name contains a space, it wont show properly or might cause a runtime failure. I uninstalled my NVIDIA programs to fix this issue
-    * as they were the only ones with spaces but otherwise everything works perfectly. (I didn't bother to fix this because I had already spent lots of time
-    * trying to figure out how to parse the strings (amongst solving all the other bugs this program spit my way). I found a temporary solution for this which allowed me to continue
-    * progress on this project.
 Author: Nicholas Pinney
 Date: Sept 23, 2019
 */
